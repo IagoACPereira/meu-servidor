@@ -1,0 +1,50 @@
+:root {
+  --teste: 1px solid red;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+html, body {
+  height: 100vh;
+}
+
+/*******************************************************/
+body {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+nav, main {
+  border: var(--teste);
+}
+
+main {  
+  padding: 2vh 2vw;
+  margin: 2vh 2vw;
+  border-radius: 10px;
+}
+
+main #projetos {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+main #projetos div img {
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+}
+
+nav img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+}
