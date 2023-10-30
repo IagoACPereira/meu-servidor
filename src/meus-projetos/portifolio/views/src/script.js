@@ -3,6 +3,7 @@ function regatarMeusDados() {
   const nome = document.querySelector("#nome")
   const contatos = document.querySelector("#contatos")
   const projetos = document.querySelector("#projetos")
+  const descricao = document.querySelector("#descricao")
 
   axios({
     method: "get",
@@ -17,6 +18,10 @@ function regatarMeusDados() {
     contatos.innerHTML += `<li>${dados.data.contatos.email}</li>`
     contatos.innerHTML += `<li>${dados.data.contatos.gitHub}</li>`
     contatos.innerHTML += `<li>${dados.data.contatos.linkedIn}</li>`
+
+    console.log(dados.data);
+
+    descricao.innerHTML = dados.data.descricao
 
     dados.data.projetos.map(projeto => {
       projetos.innerHTML += `

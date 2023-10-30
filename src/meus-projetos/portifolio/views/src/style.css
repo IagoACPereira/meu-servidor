@@ -22,11 +22,11 @@ body {
   grid-template-columns: auto auto;
 }
 
-nav, main {
+nav, main > div {
   border: var(--teste);
 }
 
-main {  
+main > div {  
   padding: 2vh 2vw;
   margin: 2vh 2vw;
   border-radius: 10px;
@@ -35,6 +35,13 @@ main {
 main #projetos {
   display: grid;
   grid-template-columns: auto auto auto;
+  height: 83vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+main #projetos div {
+  margin: 1vh 1vw;
 }
 
 main #projetos div img {
@@ -47,4 +54,17 @@ nav img {
   width: 100px;
   height: 100px;
   border-radius: 100%;
+}
+
+
+::-webkit-scrollbar-track {
+  background-color: none;
+}
+::-webkit-scrollbar {
+  width: 6px;
+  background: none;
+}
+::-webkit-scrollbar-thumb {
+  background: #dad7d7;
+  border-radius: 10px;
 }
