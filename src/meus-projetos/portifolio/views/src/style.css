@@ -19,11 +19,46 @@ html, body {
 /*******************************************************/
 body {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 25vw 75vw;
 }
 
 nav, main > div {
   border: var(--teste);
+}
+
+nav {
+  padding: 1vh 1vw;
+}
+
+nav p,
+nav ul li {
+  padding: .5vh .5vw;
+  margin-bottom: 1vh;
+}
+
+nav p {
+  border: 1px solid red;
+  border-radius: 100px;
+  margin-bottom: 2vh;
+}
+
+nav ul li {
+  border-bottom: 1px solid red;
+}
+
+nav ul {
+  border: 1px solid red;
+  padding: 1vh 1vw;
+  border-radius: 5px;
+  margin-bottom: 2vh;
+}
+
+nav img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  margin: 0 auto;
+  margin-bottom: 2vh;
 }
 
 main > div {  
@@ -34,7 +69,7 @@ main > div {
 
 main #projetos {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 33.33% 33.33% 33.33%;
   height: 83vh;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -42,19 +77,28 @@ main #projetos {
 
 main #projetos div {
   margin: 1vh 1vw;
+  padding: 0;
+  padding-bottom: 2vh;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  height: 40vh;
 }
 
-main #projetos div img {
-  border-radius: 100%;
-  width: 100px;
-  height: 100px;
+main #projetos div .img-projeto {
+  width: 100%;
+  height: 60%;
+  margin: 0;
+  background-size: cover;
 }
 
-nav img {
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
+main #projetos div i {
+  font-size: 20pt;
 }
+
 
 
 ::-webkit-scrollbar-track {

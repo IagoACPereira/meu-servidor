@@ -23,14 +23,17 @@ function regatarMeusDados() {
 
     descricao.innerHTML = dados.data.descricao
 
-    dados.data.projetos.map(projeto => {
+    dados.data.projetos.map((projeto, index) => {
       projetos.innerHTML += `
         <div>
-          <img src="${projeto.img}" alt="${projeto.titulo}">
-          <p>${projeto.titulo.replaceAll("-", " ")}</p>
-          <p><a href=""><i class="bi bi-github">${projeto.repositorio}</i></a></p>
+          <div class="img-projeto"></div>
+          <h3>${projeto.titulo.replaceAll("-", " ")}</h3>
+          <p><a href="${projeto.repositorio}"><i class="bi bi-github"></i></a></p>
         </div>
       `
+      document
+      .querySelectorAll(".img-projeto")[index]
+      .style.backgroundImage = `url(${projeto.img})`
     })
   })
 }
