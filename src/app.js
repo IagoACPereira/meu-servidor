@@ -28,7 +28,7 @@ function meuApp(app) {
   
 
   app.get("/", (req, res) => {
-    res.send("Tudo ok com o servidor!<br><a>Portfólio</a>")
+    res.send("Tudo ok com o servidor!<br><a href=\"/iagoACPereira/views/portfolio\">Portfólio</a>")
   })
 }
 
