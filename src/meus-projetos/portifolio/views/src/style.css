@@ -1,11 +1,18 @@
 :root {
   --teste: 1px solid red;
+  --bg: #222;
+  --cor1: #333;
+  --cor2: cyan;
+  --cor3: #444;
+  --cor4: #eee;
+  --cor5: #666;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
 }
 
 ul {
@@ -20,42 +27,47 @@ html, body {
 body {
   display: grid;
   grid-template-columns: 25vw 75vw;
-}
-
-nav, main > div {
-  border: var(--teste);
+  background-color: var(--bg);
 }
 
 nav {
   padding: 1vh 1vw;
+  border-right: 3px solid var(--cor3);
+  background-color: var(--cor1);
+  display: flex;
+  flex-direction: column;
 }
 
 nav p,
 nav ul li {
-  padding: .5vh .5vw;
+  padding: 1vh .5vw;
   margin-bottom: 1vh;
 }
 
 nav p {
-  border: 1px solid red;
   border-radius: 100px;
   margin-bottom: 2vh;
+  background-color: var(--cor3);
+  color: var(--cor4);
+  text-align: center;
 }
 
 nav ul li {
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid var(--cor5);
+  font-size: smaller;
 }
 
 nav ul {
-  border: 1px solid red;
   padding: 1vh 1vw;
   border-radius: 5px;
   margin-bottom: 2vh;
+  background-color: var(--cor3);
+  color: var(--cor4);
 }
 
 nav img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 100%;
   margin: 0 auto;
   margin-bottom: 2vh;
@@ -65,27 +77,40 @@ main > div {
   padding: 2vh 2vw;
   margin: 2vh 2vw;
   border-radius: 10px;
+  background-color: var(--cor1);
+  border: 3px solid var(--cor3);
+  color: var(--cor4);
 }
 
 main #projetos {
   display: grid;
   grid-template-columns: 33.33% 33.33% 33.33%;
-  height: 83vh;
+  height: 80vh;
   overflow-y: scroll;
   overflow-x: hidden;
 }
 
-main #projetos div {
+main #projetos > h2 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  border-bottom: 3px solid var(--cor3);
+  padding: 1vh 1vw;
+  margin-bottom: 2vh;
+}
+
+main #projetos > div {
   margin: 1vh 1vw;
   padding: 0;
   padding-bottom: 2vh;
-  border: 1px solid red;
+  border: 3px solid var(--cor3);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   text-align: center;
   height: 40vh;
+  border-radius: 10px;
+  background-color: var(--cor3);
 }
 
 main #projetos div .img-projeto {
@@ -93,10 +118,13 @@ main #projetos div .img-projeto {
   height: 60%;
   margin: 0;
   background-size: cover;
+  border-radius: 7px 7px 0 0;
 }
 
 main #projetos div i {
   font-size: 20pt;
+  color: var(--cor4);
+  text-transform: ;
 }
 
 
@@ -109,6 +137,6 @@ main #projetos div i {
   background: none;
 }
 ::-webkit-scrollbar-thumb {
-  background: #dad7d7;
+  background: var(--cor5);
   border-radius: 10px;
 }

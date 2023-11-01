@@ -10,7 +10,6 @@ function regatarMeusDados() {
     url: "/iagoACPereira/portfolio/"
   })
   .then(dados => {
-    console.log(dados.data)
 
     foto.src = dados.data.foto
     nome.innerHTML = dados.data.nome
@@ -18,8 +17,6 @@ function regatarMeusDados() {
     contatos.innerHTML += `<li>${dados.data.contatos.email}</li>`
     contatos.innerHTML += `<li>${dados.data.contatos.gitHub}</li>`
     contatos.innerHTML += `<li>${dados.data.contatos.linkedIn}</li>`
-
-    console.log(dados.data);
 
     descricao.innerHTML = dados.data.descricao
 
