@@ -1,5 +1,6 @@
 const express = require("express")
 const portifolioRouter = require("./meus-projetos/portifolio/routes/portifolioRoutes.js")
+const conversorRouter = require("./meus-projetos/conversor-decimal-para-binario-hexadecimal-octal-main/routes/index.js")
 
 function meuApp(app) {
   app.use(
@@ -12,7 +13,8 @@ function meuApp(app) {
   // Rotas para APIs
   app.use(
     "/iagoACPereira/",
-    portifolioRouter
+    portifolioRouter,
+    conversorRouter
   )
 
   // Rotas para views
@@ -28,7 +30,7 @@ function meuApp(app) {
   
 
   app.get("/", (req, res) => {
-    res.send("Tudo ok com o servidor!<br><a href=\"/iagoACPereira/views/portfolio\">Portfólio</a>")
+    res.send("Tudo ok com o servidor!")
   })
 }
 
