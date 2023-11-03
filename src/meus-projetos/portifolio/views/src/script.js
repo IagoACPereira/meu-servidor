@@ -25,7 +25,7 @@ function regatarMeusDados() {
         <div>
           <div class="img-projeto"></div>
           <h3>${projeto.titulo.replaceAll("-", " ")}</h3>
-          <p><a href="${projeto.repositorio}"><i class="bi bi-github"></i></a></p>
+          <p><a href="${projeto.repositorio}" target="_blank"><i class="bi bi-github"></i></a></p>
         </div>
       `
       document
