@@ -2,6 +2,7 @@ const express = require("express")
 const portifolioRouter = require("./meus-projetos/portifolio/routes/portifolioRoutes.js")
 const conversorRouter = require("./meus-projetos/conversor-decimal-para-binario-hexadecimal-octal-main/routes/index.js")
 const senhasSegurasRouter = require("./meus-projetos/gerador-de-senhas-seguras/routes/index.js")
+const validadorCpfCnpjRouter = require("./meus-projetos/validador-cpf-cnpj/routes/index.js")
 
 function meuApp(app) {
   app.use(
@@ -16,7 +17,8 @@ function meuApp(app) {
     "/iagoACPereira/",
     portifolioRouter,
     conversorRouter,
-    senhasSegurasRouter
+    senhasSegurasRouter,
+    validadorCpfCnpjRouter
   )
 
   // Rotas para views
