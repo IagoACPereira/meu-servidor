@@ -1,6 +1,7 @@
 const express = require("express")
 const portifolioRouter = require("./meus-projetos/portifolio/routes/portifolioRoutes.js")
 const conversorRouter = require("./meus-projetos/conversor-decimal-para-binario-hexadecimal-octal-main/routes/index.js")
+const senhasSegurasRouter = require("./meus-projetos/gerador-de-senhas-seguras/routes/index.js")
 
 function meuApp(app) {
   app.use(
@@ -14,7 +15,8 @@ function meuApp(app) {
   app.use(
     "/iagoACPereira/",
     portifolioRouter,
-    conversorRouter
+    conversorRouter,
+    senhasSegurasRouter
   )
 
   // Rotas para views
