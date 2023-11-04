@@ -18,6 +18,11 @@
     "titulo": "Lista-de-tarefas",
     "img": "https://live.staticflickr.com/65535/53297741324_31eb925034_n.jpg",
     "repositorio": "https://github.com/IagoACPereira/Lista-de-tarefas"
+  },
+  {
+    "titulo": "api-pensamentos-filosoficos",
+    "img": "https://static.todamateria.com.br/upload/fi/lo/filosofos-mais-importantes-og.jpg",
+    "repositorio": "https://github.com/IagoACPereira/api-pensamentos-filosoficos"
   }
 ]
 
